@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F1DDF211ED3DBD2006321E5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DDF201ED3DBD2006321E5 /* ProfileViewController.swift */; };
+		4F4ED0861EDBF7D700C01186 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4ED0851EDBF7D700C01186 /* User.swift */; };
+		4F4ED0881EDBF91700C01186 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4ED0871EDBF91700C01186 /* Post.swift */; };
 		4F9AC3CE1ECA8B3300A3630E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AC3CD1ECA8B3300A3630E /* AppDelegate.swift */; };
 		4F9AC3D01ECA8B3300A3630E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AC3CF1ECA8B3300A3630E /* ViewController.swift */; };
 		4F9AC3D31ECA8B3300A3630E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AC3D11ECA8B3300A3630E /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F1DDF201ED3DBD2006321E5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4F4ED0851EDBF7D700C01186 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4F4ED0871EDBF91700C01186 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		4F9AC3CA1ECA8B3300A3630E /* Selfiegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selfiegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9AC3CD1ECA8B3300A3630E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F9AC3CF1ECA8B3300A3630E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +62,10 @@
 			children = (
 				4F9AC3CD1ECA8B3300A3630E /* AppDelegate.swift */,
 				4F9AC3CF1ECA8B3300A3630E /* ViewController.swift */,
+				4F1DDF201ED3DBD2006321E5 /* ProfileViewController.swift */,
 				4F9AC3D11ECA8B3300A3630E /* Main.storyboard */,
+				4F4ED0851EDBF7D700C01186 /* User.swift */,
+				4F4ED0871EDBF91700C01186 /* Post.swift */,
 				4F9AC3D41ECA8B3300A3630E /* Assets.xcassets */,
 				4F9AC3D61ECA8B3300A3630E /* LaunchScreen.storyboard */,
 				4F9AC3D91ECA8B3300A3630E /* Info.plist */,
@@ -96,6 +105,7 @@
 				TargetAttributes = {
 					4F9AC3C91ECA8B3300A3630E = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = CB52ZE6LK8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F4ED0861EDBF7D700C01186 /* User.swift in Sources */,
+				4F1DDF211ED3DBD2006321E5 /* ProfileViewController.swift in Sources */,
 				4F9AC3D01ECA8B3300A3630E /* ViewController.swift in Sources */,
 				4F9AC3CE1ECA8B3300A3630E /* AppDelegate.swift in Sources */,
+				4F4ED0881EDBF91700C01186 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +271,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CB52ZE6LK8;
 				INFOPLIST_FILE = Selfiegram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joy.Selfiegram;
@@ -270,6 +284,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CB52ZE6LK8;
 				INFOPLIST_FILE = Selfiegram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joy.Selfiegram;
@@ -297,6 +312,7 @@
 				4F9AC3DE1ECA8B3300A3630E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

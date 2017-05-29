@@ -12,7 +12,7 @@
         <!--Profile VC-->
         <scene sceneID="i6y-Pd-G43">
             <objects>
-                <viewController title="Profile VC" modalTransitionStyle="flipHorizontal" id="1P9-y2-Idz" sceneMemberID="viewController">
+                <viewController title="Profile VC" modalTransitionStyle="flipHorizontal" id="1P9-y2-Idz" customClass="ProfileViewController" customModule="Selfiegram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sTI-Uy-IIT"/>
                         <viewControllerLayoutGuide type="bottom" id="yI2-jv-glx"/>
@@ -20,9 +20,47 @@
                     <view key="view" contentMode="scaleToFill" id="iQR-yt-gy5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="wa1-wv-ce1">
+                                <rect key="frame" x="97.5" y="110" width="180" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="8f7-9A-non"/>
+                                    <constraint firstAttribute="height" constant="185" id="qDY-4M-juO"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTt-18-Ak3">
+                                <rect key="frame" x="135.5" y="325" width="104" height="32"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Change Photo">
+                                    <color key="titleColor" red="0.59622651338577271" green="0.71890902519226074" blue="0.9217565655708313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraButtonPressed:" destination="1P9-y2-Idz" eventType="touchUpInside" id="jEx-5K-u2e"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LU4-2R-8oG">
+                                <rect key="frame" x="127" y="405" width="121.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LU4-2R-8oG" firstAttribute="centerX" secondItem="iQR-yt-gy5" secondAttribute="centerX" id="B0d-Nu-pri"/>
+                            <constraint firstItem="LU4-2R-8oG" firstAttribute="top" secondItem="WTt-18-Ak3" secondAttribute="bottom" constant="48" id="dIq-f3-a4x"/>
+                            <constraint firstItem="wa1-wv-ce1" firstAttribute="top" secondItem="sTI-Uy-IIT" secondAttribute="bottom" constant="46" id="h2O-ZA-qMV"/>
+                            <constraint firstItem="WTt-18-Ak3" firstAttribute="centerX" secondItem="iQR-yt-gy5" secondAttribute="centerX" id="jE9-kv-nDf"/>
+                            <constraint firstItem="WTt-18-Ak3" firstAttribute="top" secondItem="wa1-wv-ce1" secondAttribute="bottom" constant="30" id="nfY-8c-dMv"/>
+                            <constraint firstItem="wa1-wv-ce1" firstAttribute="centerX" secondItem="iQR-yt-gy5" secondAttribute="centerX" id="ocB-NI-WG6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="F68-hS-yhY"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="wa1-wv-ce1" id="QEp-Or-Clv"/>
+                        <outlet property="usernameLabel" destination="LU4-2R-8oG" id="eNV-9N-iCm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejz-Sd-iXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -66,7 +104,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qCL-lS-YEX" id="8Qt-i2-7Xh">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -96,7 +134,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ygK-BD-AbQ" id="wOL-k3-Pee">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -177,5 +215,6 @@
         <image name="Activities" width="25" height="25"/>
         <image name="NewsFeed" width="25" height="25"/>
         <image name="Profile" width="25" height="25"/>
+        <image name="placeholder" width="256" height="256"/>
     </resources>
 </document>
