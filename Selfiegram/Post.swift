@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class selfiePost {
+class Post {
     let image: UIImage
     let user: User
     let comment: String

@@ -15,6 +15,7 @@
 		4F9AC3D31ECA8B3300A3630E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AC3D11ECA8B3300A3630E /* Main.storyboard */; };
 		4F9AC3D51ECA8B3300A3630E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AC3D41ECA8B3300A3630E /* Assets.xcassets */; };
 		4F9AC3D81ECA8B3300A3630E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AC3D61ECA8B3300A3630E /* LaunchScreen.storyboard */; };
+		4FD636D81EDD10770038596E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD636D71EDD10770038596E /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4F9AC3D41ECA8B3300A3630E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F9AC3D71ECA8B3300A3630E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F9AC3D91ECA8B3300A3630E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FD636D71EDD10770038596E /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,16 +63,33 @@
 			isa = PBXGroup;
 			children = (
 				4F9AC3CD1ECA8B3300A3630E /* AppDelegate.swift */,
-				4F9AC3CF1ECA8B3300A3630E /* ViewController.swift */,
-				4F1DDF201ED3DBD2006321E5 /* ProfileViewController.swift */,
+				4FD636D91EDD1C950038596E /* Model */,
+				4FD636DA1EDD1CB10038596E /* View Controllers */,
 				4F9AC3D11ECA8B3300A3630E /* Main.storyboard */,
-				4F4ED0851EDBF7D700C01186 /* User.swift */,
-				4F4ED0871EDBF91700C01186 /* Post.swift */,
+				4F9AC3CF1ECA8B3300A3630E /* ViewController.swift */,
 				4F9AC3D41ECA8B3300A3630E /* Assets.xcassets */,
 				4F9AC3D61ECA8B3300A3630E /* LaunchScreen.storyboard */,
 				4F9AC3D91ECA8B3300A3630E /* Info.plist */,
 			);
 			path = Selfiegram;
+			sourceTree = "<group>";
+		};
+		4FD636D91EDD1C950038596E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F4ED0851EDBF7D700C01186 /* User.swift */,
+				4F4ED0871EDBF91700C01186 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4FD636DA1EDD1CB10038596E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4F1DDF201ED3DBD2006321E5 /* ProfileViewController.swift */,
+				4FD636D71EDD10770038596E /* FeedViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +169,7 @@
 				4F1DDF211ED3DBD2006321E5 /* ProfileViewController.swift in Sources */,
 				4F9AC3D01ECA8B3300A3630E /* ViewController.swift in Sources */,
 				4F9AC3CE1ECA8B3300A3630E /* AppDelegate.swift in Sources */,
+				4FD636D81EDD10770038596E /* FeedViewController.swift in Sources */,
 				4F4ED0881EDBF91700C01186 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
