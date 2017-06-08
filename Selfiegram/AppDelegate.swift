@@ -5,19 +5,62 @@
 //  Created by Joy Qiaoyi Wang on 2017-05-15.
 //  Copyright © 2017 Joy Qiaoyi Wang. All rights reserved.
 //
-
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Initialize Parse.
+        // Replace YOUR_APP_ID and URL_TO_YOUR_PARSE_SERVER with the values you chose when you installed your Parse server.
+        let configuration = ParseClientConfiguration { clientConfiguration in
+            clientConfiguration.applicationId = "1314"
+            clientConfiguration.server = "https://joy-q-wang-parse-server.herokuapp.com/parse"
+        }
+        Parse.initialize(with: configuration)
+        
+        let user = PFUser()
+        let username = "joy"
+        let password = "wang"
+        user.username = username
+        user.password = password
+        user.signUpInBackground(block: { (success, error) -> Void in
+            if success {
+                print("successfully signuped a user")
+            }else {
+                PFUser.logInWithUsername(inBackground: username, password: password, block: { (user, error) -> Void in
+                    if let user = user {
+                        print("successfully logged in \(user)")
+                    }
+                })
+            }
+        })
         return true
     }
+    
+        
+        //        // A PFObject is an object that we can add or modify in Parse.
+        //        // We are adding an object of class type TestObject
+        //        let testObject = PFObject(className: "TestObject")
+        //
+        //        // We are setting the foo property on our object to be equal to bar
+        //        testObject["foo"] = "bar"
+        //
+        //        // We are saving our object to Parse
+        //        testObject.saveInBackground(block: { (success: Bool, error: Error?) -> Void in
+        //
+        //            if success {
+        //
+        //            // If this save was successful we print a successful statement
+        //            print("Object has been saved.")
+        //            }
+        //        })
+        
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
