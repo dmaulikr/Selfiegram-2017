@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         Post.registerSubclass()
+        Activity.registerSubclass()
         
         Parse.initialize(with: configuration)
         

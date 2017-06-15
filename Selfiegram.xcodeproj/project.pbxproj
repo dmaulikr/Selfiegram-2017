@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F1DDF211ED3DBD2006321E5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DDF201ED3DBD2006321E5 /* ProfileViewController.swift */; };
+		4F3142901EF2318900127635 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F31428F1EF2318900127635 /* Activity.swift */; };
 		4F4ED0861EDBF7D700C01186 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4ED0851EDBF7D700C01186 /* User.swift */; };
 		4F4ED0881EDBF91700C01186 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4ED0871EDBF91700C01186 /* Post.swift */; };
 		4F5CC9DC1EDFB6F7002FBDA8 /* SelfieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5CC9DB1EDFB6F7002FBDA8 /* SelfieCell.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		1565BC258E0B28AA056246B6 /* Pods_Selfiegram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Selfiegram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1DDF201ED3DBD2006321E5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4F31428F1EF2318900127635 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		4F4ED0851EDBF7D700C01186 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4F4ED0871EDBF91700C01186 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		4F5CC9DB1EDFB6F7002FBDA8 /* SelfieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfieCell.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				4F4ED0851EDBF7D700C01186 /* User.swift */,
 				4F4ED0871EDBF91700C01186 /* Post.swift */,
+				4F31428F1EF2318900127635 /* Activity.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				4F9AC3D01ECA8B3300A3630E /* ViewController.swift in Sources */,
 				4F9AC3CE1ECA8B3300A3630E /* AppDelegate.swift in Sources */,
 				4FD636D81EDD10770038596E /* FeedViewController.swift in Sources */,
+				4F3142901EF2318900127635 /* Activity.swift in Sources */,
 				4F4ED0881EDBF91700C01186 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
