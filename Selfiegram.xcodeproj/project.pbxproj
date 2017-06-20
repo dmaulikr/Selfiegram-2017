@@ -17,6 +17,8 @@
 		4F9AC3D31ECA8B3300A3630E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AC3D11ECA8B3300A3630E /* Main.storyboard */; };
 		4F9AC3D51ECA8B3300A3630E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AC3D41ECA8B3300A3630E /* Assets.xcassets */; };
 		4F9AC3D81ECA8B3300A3630E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AC3D61ECA8B3300A3630E /* LaunchScreen.storyboard */; };
+		4FB2F2251EF8BEE500A1B6E7 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB2F2241EF8BEE500A1B6E7 /* ActivityViewController.swift */; };
+		4FB2F2291EF8BF4600A1B6E7 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB2F2281EF8BF4600A1B6E7 /* ActivityCell.swift */; };
 		4FD636D81EDD10770038596E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD636D71EDD10770038596E /* FeedViewController.swift */; };
 		6E3FC2F54A5CC6FD8FEF9A60 /* Pods_Selfiegram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1565BC258E0B28AA056246B6 /* Pods_Selfiegram.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +37,8 @@
 		4F9AC3D41ECA8B3300A3630E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F9AC3D71ECA8B3300A3630E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F9AC3D91ECA8B3300A3630E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FB2F2241EF8BEE500A1B6E7 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		4FB2F2281EF8BF4600A1B6E7 /* ActivityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
 		4FD636D71EDD10770038596E /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		733E567D78725D7BE681DCF2 /* Pods-Selfiegram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfiegram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Selfiegram/Pods-Selfiegram.debug.xcconfig"; sourceTree = "<group>"; };
 		9466A2D022928A4019DCEB83 /* Pods-Selfiegram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfiegram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Selfiegram/Pods-Selfiegram.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,10 +81,10 @@
 				4FD636D91EDD1C950038596E /* Model */,
 				4FD636DA1EDD1CB10038596E /* View Controllers */,
 				4F9AC3D11ECA8B3300A3630E /* Main.storyboard */,
-				4F9AC3CF1ECA8B3300A3630E /* ViewController.swift */,
 				4F9AC3D41ECA8B3300A3630E /* Assets.xcassets */,
 				4F9AC3D61ECA8B3300A3630E /* LaunchScreen.storyboard */,
 				4F5CC9DB1EDFB6F7002FBDA8 /* SelfieCell.swift */,
+				4FB2F2281EF8BF4600A1B6E7 /* ActivityCell.swift */,
 				4F9AC3D91ECA8B3300A3630E /* Info.plist */,
 			);
 			path = Selfiegram;
@@ -101,6 +105,8 @@
 			children = (
 				4F1DDF201ED3DBD2006321E5 /* ProfileViewController.swift */,
 				4FD636D71EDD10770038596E /* FeedViewController.swift */,
+				4FB2F2241EF8BEE500A1B6E7 /* ActivityViewController.swift */,
+				4F9AC3CF1ECA8B3300A3630E /* ViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -248,8 +254,10 @@
 			files = (
 				4F4ED0861EDBF7D700C01186 /* User.swift in Sources */,
 				4F1DDF211ED3DBD2006321E5 /* ProfileViewController.swift in Sources */,
+				4FB2F2291EF8BF4600A1B6E7 /* ActivityCell.swift in Sources */,
 				4F5CC9DC1EDFB6F7002FBDA8 /* SelfieCell.swift in Sources */,
 				4F9AC3D01ECA8B3300A3630E /* ViewController.swift in Sources */,
+				4FB2F2251EF8BEE500A1B6E7 /* ActivityViewController.swift in Sources */,
 				4F9AC3CE1ECA8B3300A3630E /* AppDelegate.swift in Sources */,
 				4FD636D81EDD10770038596E /* FeedViewController.swift in Sources */,
 				4F3142901EF2318900127635 /* Activity.swift in Sources */,

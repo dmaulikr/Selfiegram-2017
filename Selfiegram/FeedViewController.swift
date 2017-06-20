@@ -13,22 +13,49 @@ class FeedViewController: UITableViewController, UIImagePickerControllerDelegate
 
     var posts = [Post]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    func getPosts() {
         if let query = Post.query() {
             query.order(byDescending: "createdAt")
             query.includeKey("user")
             
             query.findObjectsInBackground(block: { (posts, error) -> Void in
-                // this block of code will run when the query is complete
-                if let posts = posts as? [Post] {
+                self.refreshControl?.endRefreshing()
+                if let posts = posts as? [Post]{
                     self.posts = posts
                     self.tableView.reloadData()
                 }
+                
             })
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        getPosts()
         
+    }
+    
+    @IBAction func refreshPulled(_ sender: UIRefreshControl) {
+        getPosts()
+    }
+    
+    
+    @IBAction func doubleTappedSelfie(_ sender: UITapGestureRecognizer) {
+        
+        // get the location (x,y) position on our tableView where we have clicked
+        let tapLocation = sender.location(in: tableView)
+        
+        // based on the x, y position we can get the indexPath for where we are at
+        if let indexPathAtTapLocation = tableView.indexPathForRow(at: tapLocation){
+            
+            // based on the indexPath we can get the specific cell that is being tapped
+            let cell = tableView.cellForRow(at: indexPathAtTapLocation) as! SelfieCell
+            
+            //run a method on that cell.
+            cell.tapAnimation()
+        }
+    }
+    
 //        let me = User(aUsername: "Joy", aProfileImage: UIImage(named: "profpic")!)
 //        let post0 = Post(image: UIImage(named: "pineapple")!, user: me, comment: "PINEAPPLES!!!!")
 //        let post1 = Post(image: UIImage(named: "richmond1")!, user: me, comment: "w0w sitting on ground so hip")
@@ -91,7 +118,6 @@ class FeedViewController: UITableViewController, UIImagePickerControllerDelegate
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -119,6 +145,7 @@ class FeedViewController: UITableViewController, UIImagePickerControllerDelegate
         return cell
     }
 
+    
     @IBAction func cameraButtonPressed(_ sender: Any) {
         
         // 1: Create an ImagePickerController
@@ -236,5 +263,4 @@ class FeedViewController: UITableViewController, UIImagePickerControllerDelegate
         // Pass the selected object to the new view controller.
     }
     */
-
 }
