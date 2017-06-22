@@ -83,6 +83,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         
         usernameLabel.text = "Joy Q. Bang"
+        navigationItem.titleView = UIImageView(image: UIImage(named: "Selfigram-logo"))
 
         // Do any additional setup after loading the view.
     }

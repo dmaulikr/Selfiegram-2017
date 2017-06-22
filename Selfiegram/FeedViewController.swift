@@ -33,6 +33,8 @@ class FeedViewController: UITableViewController, UIImagePickerControllerDelegate
         super.viewDidLoad()
         getPosts()
         
+        navigationItem.titleView = UIImageView(image: UIImage(named: "Selfigram-logo"))
+        
     }
     
     @IBAction func refreshPulled(_ sender: UIRefreshControl) {
